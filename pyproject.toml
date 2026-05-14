@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "memory-agent-risk-benchmark"
+version = "0.1.0"
+description = "Benchmark framework for evaluating risks in LLM agent memory architectures."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "Purush Simhan" }
+]
+license = { text = "MIT" }
+dependencies = [
+  "pandas>=2.0.0",
+  "matplotlib>=3.7.0",
+  "pyyaml>=6.0.0",
+  "numpy>=1.24.0"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.0.0",
+  "ruff>=0.5.0",
+  "mypy>=1.8.0"
+]
+llm = [
+  "openai>=1.0.0"
+]
+
+[project.scripts]
+marb = "marb.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

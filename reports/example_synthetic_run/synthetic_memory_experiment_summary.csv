@@ -1,0 +1,6 @@
+condition,n_tasks,memory_use_rate,task_success_rate,extraction_error_rate,update_error_rate,irrelevant_retrieval_rate,drift_rate,policy_override_failure_rate,privacy_leak_rate,poisoning_success_rate,unlearning_failure_rate
+C0_No_Memory,500.0,0.0,0.6063,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+C1_Storage,500.0,0.2487,0.5733,0.0358,0.0227,0.1053,0.0379,0.0299,0.0035,0.0008,0.0007
+C2_Reflective,500.0,0.3675,0.5421,0.064,0.0713,0.129,0.0731,0.0431,0.0115,0.0023,0.0022
+C3_Experience,500.0,0.4506,0.5173,0.0843,0.1176,0.1608,0.1111,0.063,0.0241,0.0059,0.0041
+C4_Guarded_Experience,500.0,0.4179,0.5525,0.0193,0.0235,0.0332,0.0661,0.0138,0.0015,0.0005,0.0005

@@ -1,0 +1,77 @@
+seed: 42
+n_runs: 30
+n_tasks: 500
+
+scenario_probabilities:
+  memory_relevant: 0.55
+  task_has_sensitive_data: 0.18
+  task_has_changed_instruction: 0.16
+  adversarial_poison_attempt: 0.10
+  requires_unlearning: 0.08
+  high_stakes: 0.25
+
+conditions:
+  - name: C0_No_Memory
+    memory_strength: 0.00
+    base_task_success: 0.62
+    helpful_memory_gain: 0.00
+    extraction_error_rate: 0.000
+    update_error_rate: 0.000
+    retrieval_irrelevance_rate: 0.000
+    stale_memory_rate: 0.000
+    privacy_leak_rate: 0.000
+    poison_accept_rate: 0.000
+    unlearning_failure_rate: 0.000
+    guardrail_strength: 0.00
+
+  - name: C1_Storage
+    memory_strength: 0.45
+    base_task_success: 0.62
+    helpful_memory_gain: 0.15
+    extraction_error_rate: 0.035
+    update_error_rate: 0.020
+    retrieval_irrelevance_rate: 0.120
+    stale_memory_rate: 0.080
+    privacy_leak_rate: 0.020
+    poison_accept_rate: 0.050
+    unlearning_failure_rate: 0.040
+    guardrail_strength: 0.15
+
+  - name: C2_Reflective
+    memory_strength: 0.68
+    base_task_success: 0.62
+    helpful_memory_gain: 0.22
+    extraction_error_rate: 0.070
+    update_error_rate: 0.085
+    retrieval_irrelevance_rate: 0.150
+    stale_memory_rate: 0.120
+    privacy_leak_rate: 0.045
+    poison_accept_rate: 0.080
+    unlearning_failure_rate: 0.075
+    guardrail_strength: 0.20
+
+  - name: C3_Experience
+    memory_strength: 0.82
+    base_task_success: 0.62
+    helpful_memory_gain: 0.28
+    extraction_error_rate: 0.090
+    update_error_rate: 0.125
+    retrieval_irrelevance_rate: 0.180
+    stale_memory_rate: 0.160
+    privacy_leak_rate: 0.075
+    poison_accept_rate: 0.120
+    unlearning_failure_rate: 0.130
+    guardrail_strength: 0.10
+
+  - name: C4_Guarded_Experience
+    memory_strength: 0.76
+    base_task_success: 0.62
+    helpful_memory_gain: 0.25
+    extraction_error_rate: 0.035
+    update_error_rate: 0.040
+    retrieval_irrelevance_rate: 0.070
+    stale_memory_rate: 0.055
+    privacy_leak_rate: 0.020
+    poison_accept_rate: 0.035
+    unlearning_failure_rate: 0.030
+    guardrail_strength: 0.75
